@@ -38,7 +38,7 @@ function Search() {
         <button onClick={enterSearch}>Search</button>
       </div>
       <div className="searchCountry">
-        {data && (
+        {data && data.country && (
           <div className="countryDisplay">
             <h1>{data.country.name}</h1>
             <h1>Capital: {data.country.capital} </h1>
@@ -46,6 +46,7 @@ function Search() {
             <h1> Country Code: {data.country.code}</h1>
           </div>
         )}
+        {data && data.country === null && <h1>Invalid Code</h1>}
       </div>
     </div>
   );

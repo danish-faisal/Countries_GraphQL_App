@@ -6,7 +6,7 @@ const LIST_OF_COUNTRIES = gql`
       name
       capital
       code
-      emoji
+      currency
     }
   }
 `;
@@ -25,10 +25,10 @@ function Home() {
             <div key={country.code} className="country">
               <h2>
                 {country.name}
-                <label>{country.emoji}</label>
+                <label>{country.code}</label>
               </h2>
               <h4>
-                {country.capital} | {country.code}
+                {country.capital} | {country.currency}
               </h4>
             </div>
           ))}

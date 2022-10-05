@@ -1,5 +1,6 @@
 import { gql, useLazyQuery } from "@apollo/client";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const SEARCH_COUNTRY = gql`
   query Country($code: ID!) {
@@ -29,6 +30,7 @@ function Search() {
   return (
     <div className="search">
       <div className="input">
+        <Link to="/">List of Countries</Link>
         <input
           type="text"
           placeholder="Enter Country Code (ex: AU)"

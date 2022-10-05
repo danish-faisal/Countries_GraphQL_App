@@ -34,3 +34,11 @@ body {
   margin-left: 10px;
   font-size: large;
 }
+
+.title {
+  background-color: cornflowerblue;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  color: white;
+}

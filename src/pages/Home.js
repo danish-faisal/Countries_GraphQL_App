@@ -1,4 +1,5 @@
 import { gql, useQuery } from "@apollo/client";
+import { Link } from "react-router-dom";
 
 const LIST_OF_COUNTRIES = gql`
   {
@@ -16,7 +17,10 @@ function Home() {
 
   return (
     <div className="home">
-      <h1>List of Countries</h1>
+      <div className="title">
+        <h1>List of Countries</h1>
+        <Link to="/search">Search a Country</Link>
+      </div>
       <div className="listOfCountries">
         {loading && <h3>Loading...</h3>}
         {error && <h3>error.message</h3>}
